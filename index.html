@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sangothayan — BICT undergraduate and aspiring software developer. Portfolio showcasing projects in Java, Python, and web development.">
+    <title>Sangothayan | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div id="navigation">
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#aboutme">About Me</a>
+                <a href="#education">Education</a>
+                <a href="#skill">Skill</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#cv">CV</a>
+            </div>
+            <div id="let">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" type="button">
+                    <i class="fa-solid fa-sun theme-icon-sun"></i>
+                    <i class="fa-solid fa-moon theme-icon-moon"></i>
+                </button>
+                <a href="#connect">Let's Connect
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home">
+            <div id="pichabt">
+                <div id="habt">
+                    <h4>Hello there!</h4>
+                    <h1>I'm Sangothayan</h1>
+                    <p id="bict">BICT undergraduate student</p>
+                    <p id="abt">An undergraduate at the University of Vavuniya<br>
+                        and an aspiring Software Developer passionate<br>
+                        about creating innovative digital solutions.</p>
+
+                    <div id="btns">
+                        <a href="#connect" class="btn-say-hi">
+                            <button type="button">
+                                <div class="svg-wrapper-1">
+                                    <div class="svg-wrapper">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <span>Say Hi</span>
+                            </button>
+                        </a>
+
+                        <a href="assets/Sangothayan_CV.pdf" download="Sangothayan_CV.pdf" class="cv-download-link" id="cv-download">
+                            <div class="container">
+                                <label class="label">
+                                    <input type="checkbox" class="input" />
+                                    <span class="circle">
+                                        <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19V5m0 14-4-4m4 4 4-4"></path>
+                                        </svg>
+                                        <div class="square"></div>
+                                    </span>
+                                    <p class="title">Download</p>
+                                    <p class="title">Open</p>
+                                </label>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div id="social">
+                        <a href="https://www.linkedin.com/in/yoganantham-sangothayan-244068396/" target="_blank" rel="noopener" class="social-link social-linkedin" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/sangothayan-y" target="_blank" rel="noopener" class="social-link social-github" aria-label="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="mailto:ysangothayan@gmail.com?subject=Let's%20Connect&body=Hi%20Sangothayan," class="social-link social-email" aria-label="Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="pic" class="title-card">
+                    <div id="title" class="title">
+                        <img src="sangothayan.jpg" alt="Sangothayan profile photo">
+                    </div>
+                    <div class="overlays"></div>
+                </div>
+            </div>
+
+            <div id="cardlog">
+                <div class="bgblue">
+                    <div class="card">
+                        <span class="stat-value">3.70</span>
+                        <span class="stat-label">CGPA / 4.00</span>
+                    </div>
+                </div>
+                <div class="bgblue">
+                    <div class="card">
+                        <span class="stat-value">15+</span>
+                        <span class="stat-label">GitHub Projects</span>
+                    </div>
+                </div>
+                <div class="bgblue">
+                    <div class="card">
+                        <span class="stat-value">6+</span>
+                        <span class="stat-label">Certificates</span>
+                    </div>
+                </div>
+                <div class="bgblue">
+                    <div class="card">
+                        <span class="stat-value">BICT</span>
+                        <span class="stat-label">Degree Program</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="line"></div>
+
+        <section id="aboutme">
+            <h2 class="section-title reveal">About Me</h2>
+            <div id="about-me" class="reveal">
+                <div id="circle">
+                    <img src="sangothayan.jpg" alt="Sangothayan">
+                </div>
+                <div class="about-content">
+                    <p class="about-lead">I'm <strong>Yoganantham Sangothayan</strong>, a Bachelor of Information and Communication Technology (BICT) student at the <strong>University of Vavuniya</strong>, Sri Lanka.</p>
+                    <p>Beyond coding, I'm active in campus life — volunteering with the <strong>IEEE Club</strong>, leading photography at <strong>UniPod Media Club</strong>, and serving as Director of Media & Marketing for <strong>Zero Plastic Vavuniya</strong>. I've organized and covered university events, with highlights shared on my LinkedIn.</p>
+                    <p>I enjoy building software — Java OOP systems, Python apps, and responsive web pages — while also growing in photography, media, and community leadership. I'm open to internships, collaborations, and tech competitions.</p>
+                    <ul class="about-highlights">
+                        <li><i class="fa-solid fa-location-dot"></i> Vavuniya, Sri Lanka</li>
+                        <li><i class="fa-solid fa-graduation-cap"></i> BICT — University of Vavuniya</li>
+                        <li><i class="fa-solid fa-school"></i> St. John's College, Jaffna (O/L & A/L)</li>
+                        <li><i class="fa-solid fa-camera"></i> Photography Lead · UniPod Media Club</li>
+                        <li><i class="fa-solid fa-leaf"></i> Director, Media & Marketing — Zero Plastic Vavuniya</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2 class="section-title reveal">Education</h2>
+            <div class="timeline">
+                <article class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Present</span>
+                        <h3>Bachelor of Information and Communication Technology (BICT)</h3>
+                        <p class="timeline-org">University of Vavuniya</p>
+                        <p>Currently pursuing my undergraduate degree with a strong academic record. Coursework spans programming, data structures, software engineering, databases, and computer graphics.</p>
+                        <p class="timeline-highlight"><i class="fa-solid fa-star"></i> CGPA: <strong>3.70 / 4.00</strong></p>
+                    </div>
+                </article>
+                <article class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Completed</span>
+                        <h3>G.C.E. Advanced Level — Engineering Technology</h3>
+                        <p class="timeline-org">St. John's College, Jaffna</p>
+                        <ul class="grade-list">
+                            <li><strong>Engineering Technology</strong> — C</li>
+                            <li><strong>Science for Technology</strong> — C</li>
+                            <li><strong>Information & Communication Technology</strong> — C</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Completed</span>
+                        <h3>G.C.E. Ordinary Level</h3>
+                        <p class="timeline-org">St. John's College, Jaffna</p>
+                        <p>Completed my O/L at the same school before pursuing Advanced Level in the Engineering Technology stream.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="skill">
+            <h2 class="section-title reveal">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category reveal">
+                    <h3><i class="fa-solid fa-laptop-code"></i> Languages</h3>
+                    <div class="skill-tags">
+                        <span><i class="fa-brands fa-java"></i> Java</span><span><i class="fa-brands fa-python"></i> Python</span><span><i class="fa-brands fa-square-js"></i> JavaScript</span><span><i class="fa-brands fa-html5"></i> HTML</span><span><i class="fa-brands fa-css3-alt"></i> CSS</span><span><i class="fa-solid fa-database"></i> SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category reveal">
+                    <h3><i class="fa-solid fa-cubes"></i> Concepts</h3>
+                    <div class="skill-tags">
+                        <span><i class="fa-solid fa-diagram-project"></i> OOP</span><span><i class="fa-solid fa-sitemap"></i> Inheritance</span><span><i class="fa-solid fa-shapes"></i> Polymorphism</span><span><i class="fa-solid fa-layer-group"></i> Data Structures</span><span><i class="fa-solid fa-code-branch"></i> Algorithms</span><span><i class="fa-solid fa-lock"></i> Encapsulation</span>
+                    </div>
+                </div>
+                <div class="skill-category reveal">
+                    <h3><i class="fa-solid fa-toolbox"></i> Tools & Frameworks</h3>
+                    <div class="skill-tags">
+                        <span><i class="fa-brands fa-git-alt"></i> Git</span><span><i class="fa-brands fa-github"></i> GitHub</span><span><i class="fa-brands fa-java"></i> Java Swing</span><span><i class="fa-brands fa-python"></i> Tkinter</span><span><i class="fa-solid fa-code"></i> VS Code</span><span><i class="fa-solid fa-code"></i> IntelliJ</span>
+                    </div>
+                </div>
+                <div class="skill-category reveal">
+                    <h3><i class="fa-solid fa-globe"></i> Web, Media & Other</h3>
+                    <div class="skill-tags">
+                        <span><i class="fa-solid fa-mobile-screen"></i> Responsive Design</span><span><i class="fa-solid fa-camera-retro"></i> Photography</span><span><i class="fa-solid fa-bullhorn"></i> Media Marketing</span><span><i class="fa-solid fa-video"></i> Event Coverage</span><span><i class="fa-solid fa-draw-polygon"></i> Computer Graphics</span><span><i class="fa-solid fa-window-restore"></i> GUI Apps</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title reveal">Projects</h2>
+            <p class="section-subtitle reveal">Selected work from my GitHub — academic assignments and personal builds.</p>
+            <div class="projects-grid">
+                <article class="project-card reveal">
+                    <div class="project-photo">
+                        <img src="assets/projects/pharmacy-management-system.jpg" alt="" loading="lazy" onerror="this.closest('.project-card').classList.add('no-image')">
+                        <i class="fa-solid fa-pills"></i>
+                    </div>
+                    <h3>Pharmacy Management System</h3>
+                    <p>Console-based Java app with interfaces, multi-level inheritance, and polymorphism. Handles stock, prescriptions, and bulk discount billing.</p>
+                    <div class="project-tags"><span>Java</span><span>OOP</span></div>
+                    <a href="https://github.com/sangothayan-y/pharmacy-management-system" target="_blank" rel="noopener" class="project-link">View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </article>
+                <article class="project-card reveal">
+                    <div class="project-photo">
+                        <img src="assets/projects/ride-booking-system.jpg" alt="" loading="lazy" onerror="this.closest('.project-card').classList.add('no-image')">
+                        <i class="fa-solid fa-car"></i>
+                    </div>
+                    <h3>Ride Booking System</h3>
+                    <p>Console ride-booking system using abstraction, inheritance, and polymorphism. Supports bike, car, and auto with distance-based fares.</p>
+                    <div class="project-tags"><span>Java</span><span>OOP</span></div>
+                    <a href="https://github.com/sangothayan-y/ride-booking-system" target="_blank" rel="noopener" class="project-link">View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </article>
+                <article class="project-card reveal">
+                    <div class="project-photo">
+                        <img src="assets/projects/secret-garden-flower-shop.jpg" alt="" loading="lazy" onerror="this.closest('.project-card').classList.add('no-image')">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <h3>Secret Garden Flower Shop</h3>
+                    <p>Responsive flower shop landing page with hero, product showcase, and reviews. Group project for front-end fundamentals.</p>
+                    <div class="project-tags"><span>HTML</span><span>CSS</span></div>
+                    <a href="https://github.com/sangothayan-y/secret-garden-flower-shop" target="_blank" rel="noopener" class="project-link">View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </article>
+                <article class="project-card reveal">
+                    <div class="project-photo">
+                        <img src="assets/projects/simple-chatbot-gui.jpg" alt="" loading="lazy" onerror="this.closest('.project-card').classList.add('no-image')">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3>Simple Chatbot GUI</h3>
+                    <p>Rule-based chatbot with a Tkinter GUI — pattern matching responses in a clean desktop interface.</p>
+                    <div class="project-tags"><span>Python</span><span>Tkinter</span></div>
+                    <a href="https://github.com/sangothayan-y/simple-chatbot-gui" target="_blank" rel="noopener" class="project-link">View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </article>
+                <article class="project-card reveal">
+                    <div class="project-photo">
+                        <img src="assets/projects/passenger-count.jpg" alt="" loading="lazy" onerror="this.closest('.project-card').classList.add('no-image')">
+                        <i class="fa-solid fa-bus"></i>
+                    </div>
+                    <h3>Passenger Count App</h3>
+                    <p>Interactive counter built with HTML, CSS, and JavaScript — increment, save, and reset passenger counts.</p>
+                    <div class="project-tags"><span>JavaScript</span><span>CSS</span></div>
+                    <a href="https://github.com/sangothayan-y/Passenger-count" target="_blank" rel="noopener" class="project-link">View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </article>
+            </div>
+            <div class="projects-cta">
+                <a href="https://github.com/sangothayan-y" target="_blank" rel="noopener" class="btn-outline">
+                    <i class="fa-brands fa-github"></i> See all repositories
+                </a>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2 class="section-title reveal">Experience</h2>
+            <p class="section-subtitle reveal">Volunteering, leadership roles, competitions, and certifications.</p>
+
+            <div class="experience-columns">
+                <div class="experience-column reveal">
+                    <h3 class="experience-group-title"><i class="fa-solid fa-handshake-angle"></i> Volunteering & Leadership</h3>
+                    <div class="timeline">
+                        <article class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Present</span>
+                                <h3>Director of Media & Marketing</h3>
+                                <p class="timeline-org">Zero Plastic Vavuniya Community</p>
+                                <p>Lead media strategy, marketing campaigns, and visual content for environmental awareness initiatives in the Vavuniya region. Recognized with volunteer awards in 2025.</p>
+                                <span class="cert-badge" role="button" tabindex="0" data-cert-img="assets/certs/hero-volunteer-2025.jpg" data-cert-title="Hero Volunteer 2025" data-cert-org="Zero Plastic Vavuniya"><i class="fa-solid fa-certificate"></i> Hero Volunteer 2025</span>
+                                <span class="cert-badge" role="button" tabindex="0" data-cert-img="assets/certs/best-photographer-2025.jpg" data-cert-title="Best Volunteer Photographer of the Year 2025" data-cert-org="Zero Plastic Vavuniya"><i class="fa-solid fa-certificate"></i> Best Volunteer Photographer 2025</span>
+                            </div>
+                        </article>
+                        <article class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Present</span>
+                                <h3>Photography Lead</h3>
+                                <p class="timeline-org">UniPod Media Club — University of Vavuniya</p>
+                                <p>Lead photography for university events, media coverage, and club productions. Capture and edit visual content for campus activities and promotions.</p>
+                            </div>
+                        </article>
+                        <article class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Present</span>
+                                <h3>Volunteer — IEEE Club</h3>
+                                <p class="timeline-org">University of Vavuniya</p>
+                                <p>Volunteer for IEEE club events and technical activities on campus. Contributed to organizing events — highlights and updates shared on <a href="https://www.linkedin.com/in/yoganantham-sangothayan-244068396/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="experience-column reveal">
+                    <h3 class="experience-group-title"><i class="fa-solid fa-trophy"></i> Competitions & Events</h3>
+                    <div class="timeline">
+                        <article class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2025</span>
+                                <h3>UoJ Coders V5.0 — Grand Finale</h3>
+                                <p class="timeline-org">University of Jaffna</p>
+                                <p>Participated in the coding competition finale at Jaffna University, competing among selected finalists in a university-level programming event.</p>
+                            </div>
+                        </article>
+                        <article class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2025</span>
+                                <h3>HYDRA CTF</h3>
+                                <p class="timeline-org">Capture The Flag Competition</p>
+                                <p>Participated in HYDRA CTF, gaining hands-on exposure to cybersecurity challenges and team-based problem solving.</p>
+                                <span class="cert-badge" role="button" tabindex="0" data-cert-img="assets/certs/hydra-ctf.jpg" data-cert-title="HYDRA CTF" data-cert-org="Participation Certificate"><i class="fa-solid fa-certificate"></i> Participation Certificate</span>
+                            </div>
+                        </article>
+                        <article class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2025</span>
+                                <h3>Vanni Xtreme IEEE 2.0</h3>
+                                <p class="timeline-org">IEEE Event — Vanni Region</p>
+                                <p>Participated in Vanni Xtreme IEEE 2.0, a regional IEEE event focused on technology, innovation, and student engagement.</p>
+                                <span class="cert-badge" role="button" tabindex="0" data-cert-img="assets/certs/vanni-xtreme.jpg" data-cert-title="Vanni Xtreme IEEE 2.0" data-cert-org="Participation Certificate"><i class="fa-solid fa-certificate"></i> Participation Certificate</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="experience-group-title"><i class="fa-solid fa-award"></i> Certifications & Achievements</h3>
+            <div class="cert-grid">
+                <article class="cert-card reveal" role="button" tabindex="0" data-cert-img="assets/certs/python-scrimba.jpg" data-cert-title="Python Course" data-cert-org="Scrimba">
+                    <div class="cert-card-media">
+                        <img src="assets/certs/python-scrimba.jpg" alt="" loading="lazy" onerror="this.closest('.cert-card').classList.add('no-image')">
+                        <i class="fa-brands fa-python"></i>
+                    </div>
+                    <h4>Python Course</h4>
+                    <p>Scrimba</p>
+                    <span class="cert-badge"><i class="fa-solid fa-certificate"></i> Certified</span>
+                </article>
+                <article class="cert-card reveal" role="button" tabindex="0" data-cert-img="assets/certs/hero-volunteer-2025.jpg" data-cert-title="Hero Volunteer 2025" data-cert-org="Zero Plastic Vavuniya">
+                    <div class="cert-card-media">
+                        <img src="assets/certs/hero-volunteer-2025.jpg" alt="" loading="lazy" onerror="this.closest('.cert-card').classList.add('no-image')">
+                        <i class="fa-solid fa-medal"></i>
+                    </div>
+                    <h4>Hero Volunteer 2025</h4>
+                    <p>Zero Plastic Vavuniya</p>
+                    <span class="cert-badge"><i class="fa-solid fa-certificate"></i> Certificate</span>
+                </article>
+                <article class="cert-card reveal" role="button" tabindex="0" data-cert-img="assets/certs/best-photographer-2025.jpg" data-cert-title="Best Volunteer Photographer of the Year 2025" data-cert-org="Zero Plastic Vavuniya">
+                    <div class="cert-card-media">
+                        <img src="assets/certs/best-photographer-2025.jpg" alt="" loading="lazy" onerror="this.closest('.cert-card').classList.add('no-image')">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+                    <h4>Best Volunteer Photographer of the Year 2025</h4>
+                    <p>Zero Plastic Vavuniya</p>
+                    <span class="cert-badge"><i class="fa-solid fa-certificate"></i> Certificate</span>
+                </article>
+                <article class="cert-card reveal" role="button" tabindex="0" data-cert-img="assets/certs/hydra-ctf.jpg" data-cert-title="HYDRA CTF" data-cert-org="Participation Certificate">
+                    <div class="cert-card-media">
+                        <img src="assets/certs/hydra-ctf.jpg" alt="" loading="lazy" onerror="this.closest('.cert-card').classList.add('no-image')">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h4>HYDRA CTF</h4>
+                    <p>Participation</p>
+                    <span class="cert-badge"><i class="fa-solid fa-certificate"></i> Certificate</span>
+                </article>
+                <article class="cert-card reveal" role="button" tabindex="0" data-cert-img="assets/certs/vanni-xtreme.jpg" data-cert-title="Vanni Xtreme IEEE 2.0" data-cert-org="Participation Certificate">
+                    <div class="cert-card-media">
+                        <img src="assets/certs/vanni-xtreme.jpg" alt="" loading="lazy" onerror="this.closest('.cert-card').classList.add('no-image')">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h4>Vanni Xtreme IEEE 2.0</h4>
+                    <p>Participation</p>
+                    <span class="cert-badge"><i class="fa-solid fa-certificate"></i> Certificate</span>
+                </article>
+                <article class="cert-card reveal" role="button" tabindex="0" data-cert-img="assets/certs/uoj-coders.jpg" data-cert-title="UoJ Coders V5.0" data-cert-org="Grand Finale — University of Jaffna">
+                    <div class="cert-card-media">
+                        <img src="assets/certs/uoj-coders.jpg" alt="" loading="lazy" onerror="this.closest('.cert-card').classList.add('no-image')">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h4>UoJ Coders V5.0</h4>
+                    <p>Grand Finale — University of Jaffna</p>
+                    <span class="cert-badge"><i class="fa-solid fa-certificate"></i> Participant</span>
+                </article>
+            </div>
+
+            <h3 class="experience-group-title"><i class="fa-solid fa-laptop-code"></i> Projects & Development</h3>
+            <div class="timeline">
+                <article class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024 — Present</span>
+                        <h3>Software Development — Academic & Personal Projects</h3>
+                        <p class="timeline-org">Self-directed · GitHub</p>
+                        <p>Built 15+ repositories covering Java OOP systems, computer graphics, Python GUIs, and responsive web pages with Git version control.</p>
+                    </div>
+                </article>
+                <article class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2025</span>
+                        <h3>Secret Garden Flower Shop — Group Project</h3>
+                        <p class="timeline-org">University of Vavuniya</p>
+                        <p>Collaborated on a responsive landing page with hero section, product showcase, and customer reviews using HTML and CSS.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="cv">
+            <h2 class="section-title reveal">Curriculum Vitae</h2>
+            <div class="cv-section reveal">
+                <div class="cv-preview">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <h3>Sangothayan_CV.pdf</h3>
+                    <p>Download my full resume with education, skills, and project details.</p>
+                    <div class="cv-actions">
+                        <a href="assets/Sangothayan_CV.pdf" download="Sangothayan_CV.pdf" class="btn-primary">
+                            <i class="fa-solid fa-download"></i> Download CV
+                        </a>
+                        <a href="assets/Sangothayan_CV.pdf" target="_blank" rel="noopener" class="btn-outline">
+                            <i class="fa-solid fa-eye"></i> View in Browser
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="connect">
+            <span class="eyebrow reveal">Get In Touch</span>
+            <h2 class="section-title reveal">Let's Connect</h2>
+            <p class="section-subtitle reveal">Open to internships, collaborations, and tech conversations.</p>
+            <div class="connect-grid">
+                <a href="mailto:ysangothayan@gmail.com" class="connect-card reveal">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>ysangothayan@gmail.com</p>
+                </a>
+                <a href="https://www.linkedin.com/in/yoganantham-sangothayan-244068396/" target="_blank" rel="noopener" class="connect-card reveal">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <h3>LinkedIn</h3>
+                    <p>Yoganantham Sangothayan</p>
+                </a>
+                <a href="https://github.com/sangothayan-y" target="_blank" rel="noopener" class="connect-card reveal">
+                    <i class="fa-brands fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p>@sangothayan-y</p>
+                </a>
+                <div class="connect-card connect-card-static reveal">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h3>Location</h3>
+                    <p>Vavuniya, Sri Lanka</p>
+                </div>
+            </div>
+
+            <form class="contact-form reveal" id="contact-form">
+                <h3>Send a Message</h3>
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" rows="5" placeholder="Your message..." required></textarea>
+                <button type="submit" class="btn-primary">
+                    <i class="fa-solid fa-paper-plane"></i> Send via Email
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sangothayan. Built with HTML, CSS & JavaScript.</p>
+        <div class="footer-links">
+            <a href="https://github.com/sangothayan-y" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/yoganantham-sangothayan-244068396/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:ysangothayan@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </footer>
+
+    <div class="cert-modal" id="cert-modal" aria-hidden="true">
+        <div class="cert-modal-backdrop" data-cert-close></div>
+        <div class="cert-modal-content" role="dialog" aria-modal="true" aria-labelledby="cert-modal-title">
+            <button class="cert-modal-close" data-cert-close aria-label="Close certificate view">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="cert-modal-img-wrap">
+                <img class="cert-modal-img" id="cert-modal-img" src="" alt="Certificate">
+            </div>
+            <div class="cert-modal-info">
+                <h3 id="cert-modal-title"></h3>
+                <p id="cert-modal-org"></p>
+                <a id="cert-modal-download" class="btn-primary" href="" download>
+                    <i class="fa-solid fa-download"></i> Download Certificate
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+ 
