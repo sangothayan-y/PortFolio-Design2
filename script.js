@@ -58,6 +58,7 @@
 
 (function () {
     const toggleBtn = document.getElementById('theme-toggle');
+    const toggleLabel = toggleBtn?.querySelector('.toggle-label');
     const root = document.documentElement;
     const stored = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -65,8 +66,16 @@
     function applyTheme(theme) {
         if (theme === 'dark') {
             root.setAttribute('data-theme', 'dark');
+            toggleBtn?.classList.add('active');
+            toggleBtn?.setAttribute('aria-pressed', 'true');
+            if (toggleLabel) toggleLabel.textContent = 'ON';
+            if (toggleBtn) toggleBtn.setAttribute('aria-label', 'Dark mode is on');
         } else {
             root.removeAttribute('data-theme');
+            toggleBtn?.classList.remove('active');
+            toggleBtn?.setAttribute('aria-pressed', 'false');
+            if (toggleLabel) toggleLabel.textContent = 'OFF';
+            if (toggleBtn) toggleBtn.setAttribute('aria-label', 'Dark mode is off');
         }
     }
 
