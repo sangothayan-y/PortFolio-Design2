@@ -3,7 +3,7 @@
 A personal portfolio website for Sangothayan — BICT (Hons) undergraduate at the University of Vavuniya, backend software development enthusiast (Java, Spring Boot, MySQL). Built as a fully static site with vanilla HTML, CSS, and JavaScript.
 
 🔗 **Live site:** _add your GitHub Pages / custom domain link here_
-📄 **Repo:** [sangothayan-y/portfolio-website]([https://github.com/sangothayan-y/portfolio-website](https://sangothayan-y.github.io/sangothayan/))
+📄 **Repo:** [sangothayan-y/portfolio-website](https://sangothayan-y.github.io/sangothayan/)
 
 ---
 
