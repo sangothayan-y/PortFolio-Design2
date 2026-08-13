@@ -1,64 +1,213 @@
+// ---------- 1. Certificate Popup Modal ----------
 (function () {
-    const modal = document.getElementById('cert-modal');
-    if (!modal) return;
+    const certModal = document.getElementById('cert-modal');
+    if (!certModal) return;
 
-    const modalImg = document.getElementById('cert-modal-img');
-    const modalTitle = document.getElementById('cert-modal-title');
-    const modalOrg = document.getElementById('cert-modal-org');
-    const modalDownload = document.getElementById('cert-modal-download');
+    const certImg = document.getElementById('cert-modal-img');
+    const certPdf = document.getElementById('cert-modal-pdf');
+    const certTitle = document.getElementById('cert-modal-title');
+    const certOrg = document.getElementById('cert-modal-org');
+    const certDownload = document.getElementById('cert-modal-download');
+    const certOpenPdf = document.getElementById('cert-modal-open-pdf');
     let lastFocused = null;
 
-    function openModal(trigger) {
+    function openCertModal(trigger) {
         const img = trigger.getAttribute('data-cert-img');
+        const pdfSrc = trigger.getAttribute('data-cert-pdf') || '';
         const title = trigger.getAttribute('data-cert-title') || 'Certificate';
         const org = trigger.getAttribute('data-cert-org') || '';
 
-        modalImg.src = img;
-        modalImg.alt = title;
-        modalTitle.textContent = title;
-        modalOrg.textContent = org;
-        modalDownload.href = img;
-        modalDownload.setAttribute('download', title.replace(/\s+/g, '_') + '.jpg');
+        const isPdf = !!pdfSrc;
+
+        if (certTitle) certTitle.textContent = title;
+        if (certOrg) certOrg.textContent = org;
+
+        if (isPdf) {
+            // Show PDF iframe, hide img
+            if (certImg) certImg.style.display = 'none';
+            if (certPdf) {
+                certPdf.src = pdfSrc;
+                certPdf.style.display = 'block';
+            }
+            // Download button → downloads the PDF
+            if (certDownload) {
+                certDownload.href = pdfSrc;
+                certDownload.setAttribute('download', title.replace(/\s+/g, '_') + '.pdf');
+            }
+            // Show "Open Full PDF" button
+            if (certOpenPdf) {
+                certOpenPdf.href = pdfSrc;
+                certOpenPdf.style.display = 'inline-flex';
+            }
+        } else {
+            // Show image, hide PDF iframe
+            if (certPdf) { certPdf.style.display = 'none'; certPdf.src = ''; }
+            if (certImg) {
+                certImg.src = img;
+                certImg.alt = title;
+                certImg.style.display = 'block';
+            }
+            // Download button → downloads the image
+            if (certDownload) {
+                certDownload.href = img;
+                let downloadExt = 'jpg';
+                try {
+                    const parts = img.split('?')[0].split('.');
+                    if (parts.length > 1) downloadExt = parts.pop();
+                } catch (e) {}
+                certDownload.setAttribute('download', title.replace(/\s+/g, '_') + '.' + downloadExt);
+            }
+            // Hide "Open Full PDF" button
+            if (certOpenPdf) certOpenPdf.style.display = 'none';
+        }
 
         lastFocused = document.activeElement;
-        modal.classList.add('is-open');
-        modal.setAttribute('aria-hidden', 'false');
+        certModal.classList.add('is-open');
+        certModal.setAttribute('aria-hidden', 'false');
         document.body.classList.add('modal-open');
-        modal.querySelector('.cert-modal-close').focus();
+        
+        const closeBtn = certModal.querySelector('.cert-modal-close');
+        if (closeBtn) closeBtn.focus();
     }
 
-    function closeModal() {
-        modal.classList.remove('is-open');
-        modal.setAttribute('aria-hidden', 'true');
+    function closeCertModal() {
+        certModal.classList.remove('is-open');
+        certModal.setAttribute('aria-hidden', 'true');
         document.body.classList.remove('modal-open');
+        // Clear PDF src to stop it loading in background
+        if (certPdf) certPdf.src = '';
         if (lastFocused) lastFocused.focus();
     }
 
     document.querySelectorAll('[data-cert-img]').forEach((el) => {
-        el.style.cursor = 'pointer';
-        el.addEventListener('click', () => openModal(el));
+        el.addEventListener('click', (e) => {
+            e.stopPropagation();
+            openCertModal(el);
+        });
         el.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
-                openModal(el);
+                openCertModal(el);
             }
         });
     });
 
-    modal.querySelectorAll('[data-cert-close]').forEach((el) => {
-        el.addEventListener('click', closeModal);
+    certModal.querySelectorAll('[data-cert-close]').forEach((el) => {
+        el.addEventListener('click', closeCertModal);
     });
 
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('is-open')) {
-            closeModal();
+        if (e.key === 'Escape' && certModal.classList.contains('is-open')) {
+            closeCertModal();
         }
     });
 })();
 
+
+// ---------- 2. Project Detail Modal ----------
+(function () {
+    const projectModal = document.getElementById('project-modal');
+    if (!projectModal) return;
+
+    const modalImg = document.getElementById('project-modal-img');
+    const modalTitle = document.getElementById('project-modal-title');
+    const modalTags = document.getElementById('project-modal-tags');
+    const modalProblem = document.getElementById('project-modal-problem');
+    const modalSolution = document.getElementById('project-modal-solution');
+    const modalGithub = document.getElementById('project-modal-github');
+    let lastFocused = null;
+
+    function openProjectModal(card) {
+        const title = card.getAttribute('data-project-title') || 'Project Details';
+        const img = card.getAttribute('data-project-img') || '';
+        const tags = (card.getAttribute('data-project-tags') || '').split(',');
+        const problem = card.getAttribute('data-project-problem') || '';
+        const solution = card.getAttribute('data-project-solution') || '';
+        const github = card.getAttribute('data-project-github') || '';
+
+        if (modalImg) {
+            modalImg.src = img;
+            modalImg.alt = title;
+        }
+        if (modalTitle) modalTitle.textContent = title;
+        
+        if (modalTags) {
+            modalTags.innerHTML = tags.map(t => `<span>${t.trim()}</span>`).join('');
+        }
+        
+        if (modalProblem) modalProblem.textContent = problem;
+        if (modalSolution) modalSolution.textContent = solution;
+        
+        if (modalGithub) {
+            if (github) {
+                modalGithub.href = github;
+                modalGithub.style.display = 'inline-flex';
+            } else {
+                modalGithub.style.display = 'none';
+            }
+        }
+
+        lastFocused = document.activeElement;
+        projectModal.classList.add('is-open');
+        projectModal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+
+        const closeBtn = projectModal.querySelector('.project-modal-close');
+        if (closeBtn) closeBtn.focus();
+    }
+
+    function closeProjectModal() {
+        projectModal.classList.remove('is-open');
+        projectModal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+        if (lastFocused) lastFocused.focus();
+    }
+
+    document.querySelectorAll('.project-card').forEach((card) => {
+        card.addEventListener('click', () => openProjectModal(card));
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openProjectModal(card);
+            }
+        });
+    });
+
+    projectModal.querySelectorAll('[data-project-close]').forEach((el) => {
+        el.addEventListener('click', closeProjectModal);
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && projectModal.classList.contains('is-open')) {
+            closeProjectModal();
+        }
+    });
+})();
+
+// ---------- 3. About Me Read More / Read Less Toggle ----------
+(function () {
+    const btn = document.getElementById('about-read-more-btn');
+    const extendedContent = document.getElementById('about-extended');
+
+    if (btn && extendedContent) {
+        btn.addEventListener('click', () => {
+            const isExpanded = extendedContent.classList.toggle('is-expanded');
+            if (isExpanded) {
+                btn.innerHTML = 'Read Less <i class="fa-solid fa-chevron-up"></i>';
+                btn.setAttribute('aria-expanded', 'true');
+            } else {
+                btn.innerHTML = 'Read More <i class="fa-solid fa-chevron-down"></i>';
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+})();
+
+// ---------- 4. Minimalist Theme Toggle ----------
 (function () {
     const toggleBtn = document.getElementById('theme-toggle');
     const toggleLabel = toggleBtn?.querySelector('.toggle-label');
+    const toggleIcon = toggleBtn?.querySelector('.theme-icon');
     const root = document.documentElement;
     const stored = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -66,16 +215,14 @@
     function applyTheme(theme) {
         if (theme === 'dark') {
             root.setAttribute('data-theme', 'dark');
-            toggleBtn?.classList.add('active');
-            toggleBtn?.setAttribute('aria-pressed', 'true');
-            if (toggleLabel) toggleLabel.textContent = 'ON';
-            if (toggleBtn) toggleBtn.setAttribute('aria-label', 'Dark mode is on');
+            if (toggleLabel) toggleLabel.textContent = 'Dark';
+            if (toggleIcon) toggleIcon.className = 'fa-solid fa-moon theme-icon';
+            if (toggleBtn) toggleBtn.setAttribute('aria-label', 'Switch to light mode');
         } else {
             root.removeAttribute('data-theme');
-            toggleBtn?.classList.remove('active');
-            toggleBtn?.setAttribute('aria-pressed', 'false');
-            if (toggleLabel) toggleLabel.textContent = 'OFF';
-            if (toggleBtn) toggleBtn.setAttribute('aria-label', 'Dark mode is off');
+            if (toggleLabel) toggleLabel.textContent = 'Light';
+            if (toggleIcon) toggleIcon.className = 'fa-solid fa-sun theme-icon';
+            if (toggleBtn) toggleBtn.setAttribute('aria-label', 'Switch to dark mode');
         }
     }
 
@@ -91,12 +238,13 @@
     }
 })();
 
+// ---------- 5. Profile Card 3D Tilt ----------
 (function () {
     const card = document.getElementById('title');
     const container = document.querySelector('#pic');
 
     if (card && container) {
-        const maxRotation = 18;
+        const maxRotation = 14;
 
         function handleMouseMove(e) {
             const rect = container.getBoundingClientRect();
@@ -108,39 +256,47 @@
             const rotateY = (mouseX - 0.5) * 2 * maxRotation;
             const rotateX = (0.5 - mouseY) * 2 * maxRotation;
             card.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-
-            const shadowX = (mouseX - 0.5) * 20;
-            const shadowY = (0.5 - mouseY) * 15;
-            card.style.boxShadow = `${shadowX}px ${shadowY}px 40px -12px rgba(0,0,0,0.5)`;
         }
 
         function resetCard() {
-            card.style.transform = 'perspective(1200px) rotateX(0deg) rotateY(0deg) translateZ(0px)';
-            card.style.boxShadow = '0 25px 40px -12px rgba(0,0,0,0.5)';
+            card.style.transform = 'perspective(1200px) rotateX(0deg) rotateY(0deg)';
         }
 
         container.addEventListener('mousemove', handleMouseMove);
         container.addEventListener('mouseleave', resetCard);
-
-        container.addEventListener('touchmove', (e) => {
-            if (e.touches.length) {
-                const touch = e.touches[0];
-                handleMouseMove({ clientX: touch.clientX, clientY: touch.clientY });
-            }
-        }, { passive: true });
-
-        container.addEventListener('touchend', resetCard);
     }
 })();
 
+// ---------- 6. Navigation Scroll, Active Highlight & Back to Top ----------
+const backToTopBtn = document.getElementById('back-to-top');
+
 window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
-    if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
-    } else {
-        nav.classList.remove('scrolled');
+    if (nav) {
+        if (window.scrollY > 50) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    }
+
+    if (backToTopBtn) {
+        if (window.scrollY > 350) {
+            backToTopBtn.classList.add('is-visible');
+        } else {
+            backToTopBtn.classList.remove('is-visible');
+        }
     }
 });
+
+if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
 
 (function () {
     const toggle = document.querySelector('.nav-toggle');
@@ -165,6 +321,7 @@ window.addEventListener('scroll', () => {
     }
 })();
 
+// Active Nav Link Highlighting
 (function () {
     const sections = document.querySelectorAll('section[id]');
     const navAnchors = document.querySelectorAll('.nav-links a');
@@ -188,28 +345,24 @@ window.addEventListener('scroll', () => {
     setActiveNav();
 })();
 
-(function () {
-    const cvLink = document.getElementById('cv-download');
-    const cvCheckbox = cvLink?.querySelector('.input');
-
-    if (cvLink && cvCheckbox) {
-        cvLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            if (!cvCheckbox.checked) {
-                cvCheckbox.checked = true;
-            }
-            setTimeout(() => {
-                const anchor = document.createElement('a');
-                anchor.href = 'assets/Sangothayan_CV.pdf';
-                anchor.download = 'Sangothayan_CV.pdf';
-                anchor.click();
-            }, 3800);
-        });
-    }
-})();
-
+// ---------- 7. Contact Form Submit with Thank You Pop-up Modal ----------
 (function () {
     const form = document.getElementById('contact-form');
+    const contactModal = document.getElementById('contact-modal');
+
+    function openContactModal() {
+        if (!contactModal) return;
+        contactModal.classList.add('is-open');
+        contactModal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+    }
+
+    function closeContactModal() {
+        if (!contactModal) return;
+        contactModal.classList.remove('is-open');
+        contactModal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+    }
 
     if (form) {
         form.addEventListener('submit', (e) => {
@@ -221,14 +374,31 @@ window.addEventListener('scroll', () => {
             const message = data.get('message');
 
             const body = encodeURIComponent(
-                `Name: ${name}\nEmail: ${email}\n\n${message}`
+                `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
             );
             const mailto = `mailto:ysangothayan@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+            
+            // Open mail client and show kind Thank You modal
             window.location.href = mailto;
+            openContactModal();
+            form.reset();
+        });
+    }
+
+    if (contactModal) {
+        contactModal.querySelectorAll('[data-contact-close]').forEach((el) => {
+            el.addEventListener('click', closeContactModal);
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && contactModal.classList.contains('is-open')) {
+                closeContactModal();
+            }
         });
     }
 })();
 
+// ---------- 8. IntersectionObserver Scroll Reveal ----------
 (function () {
     const revealEls = document.querySelectorAll('.reveal');
 
@@ -248,7 +418,7 @@ window.addEventListener('scroll', () => {
                 }
             });
         },
-        { threshold: 0.15, rootMargin: '0px 0px -60px 0px' }
+        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
     );
 
     revealEls.forEach((el) => revealObserver.observe(el));

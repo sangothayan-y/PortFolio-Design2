@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="certBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#certBg)"/>
+  <rect x="25" y="25" width="750" height="550" fill="none" stroke="url(#cyanGrad)" stroke-width="4"/>
+
+  <circle cx="400" cy="110" r="35" fill="rgba(6,182,212,0.15)" stroke="#06b6d4" stroke-width="2"/>
+  <text x="400" y="118" fill="#06b6d4" font-family="sans-serif" font-size="28" text-anchor="middle">🛡️</text>
+
+  <text x="400" y="180" fill="#ffffff" font-family="'Poppins', sans-serif" font-weight="800" font-size="32" letter-spacing="4" text-anchor="middle">CERTIFICATE OF PARTICIPATION</text>
+  <text x="400" y="210" fill="#94a3b8" font-family="sans-serif" font-size="15" text-anchor="middle">THIS IS AWARDED TO</text>
+
+  <text x="400" y="265" fill="#38bdf8" font-family="'Poppins', sans-serif" font-weight="700" font-size="34" text-anchor="middle">Yoganantham Sangothayan</text>
+  <line x1="200" y1="280" x2="600" y2="280" stroke="url(#cyanGrad)" stroke-width="2"/>
+
+  <text x="400" y="325" fill="#ffffff" font-family="'Poppins', sans-serif" font-weight="bold" font-size="22" text-anchor="middle">HYDRA CTF — CYBERSECURITY COMPETITION 2025</text>
+  <text x="400" y="360" fill="#94a3b8" font-family="sans-serif" font-size="14" text-anchor="middle">For active participation and demonstrating technical problem-solving skills</text>
+  <text x="400" y="382" fill="#94a3b8" font-family="sans-serif" font-size="14" text-anchor="middle">in vulnerability exploitation, cryptography, and network security challenges.</text>
+
+  <g transform="translate(150, 480)">
+    <line x1="0" y1="0" x2="180" y2="0" stroke="#475569" stroke-width="1.5"/>
+    <text x="90" y="20" fill="#ffffff" font-family="sans-serif" font-weight="bold" font-size="13" text-anchor="middle">CTF Executive Team</text>
+  </g>
+
+  <g transform="translate(470, 480)">
+    <line x1="0" y1="0" x2="180" y2="0" stroke="#475569" stroke-width="1.5"/>
+    <text x="90" y="20" fill="#ffffff" font-family="sans-serif" font-weight="bold" font-size="13" text-anchor="middle">HYDRA Cyber Security</text>
+  </g>
+</svg>

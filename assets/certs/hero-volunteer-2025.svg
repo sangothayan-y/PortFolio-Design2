@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="certBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fffdfa"/>
+      <stop offset="100%" stop-color="#f7f3e9"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#bf953f"/>
+      <stop offset="25%" stop-color="#fcf6ba"/>
+      <stop offset="50%" stop-color="#b38728"/>
+      <stop offset="75%" stop-color="#fbf5b7"/>
+      <stop offset="100%" stop-color="#aa771c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Certificate Border -->
+  <rect width="800" height="600" fill="url(#certBg)"/>
+  <rect x="25" y="25" width="750" height="550" fill="none" stroke="url(#gold)" stroke-width="8"/>
+  <rect x="40" y="40" width="720" height="520" fill="none" stroke="#2d3748" stroke-width="2"/>
+  
+  <!-- Decorative Corner Ornaments -->
+  <circle cx="40" cy="40" r="12" fill="url(#gold)"/>
+  <circle cx="760" cy="40" r="12" fill="url(#gold)"/>
+  <circle cx="40" cy="560" r="12" fill="url(#gold)"/>
+  <circle cx="760" cy="560" r="12" fill="url(#gold)"/>
+
+  <!-- Emblem / Header -->
+  <circle cx="400" cy="110" r="35" fill="url(#gold)"/>
+  <text x="400" y="118" fill="#1a202c" font-family="sans-serif" font-size="28" text-anchor="middle">🏅</text>
+
+  <text x="400" y="180" fill="#1a202c" font-family="'Georgia', serif" font-weight="700" font-size="32" letter-spacing="4" text-anchor="middle">CERTIFICATE OF RECOGNITION</text>
+  <text x="400" y="210" fill="#718096" font-family="'Georgia', serif" font-style="italic" font-size="16" text-anchor="middle">THIS IS PROUDLY PRESENTED TO</text>
+
+  <!-- Name -->
+  <text x="400" y="265" fill="#1a365d" font-family="'Georgia', serif" font-weight="700" font-size="36" text-anchor="middle">Yoganantham Sangothayan</text>
+  <line x1="200" y1="280" x2="600" y2="280" stroke="url(#gold)" stroke-width="3"/>
+
+  <!-- Achievement details -->
+  <text x="400" y="320" fill="#2d3748" font-family="sans-serif" font-weight="bold" font-size="22" text-anchor="middle">HERO VOLUNTEER 2025</text>
+  <text x="400" y="355" fill="#4a5568" font-family="sans-serif" font-size="15" text-anchor="middle">In recognition of outstanding dedication, leadership, and volunteer service</text>
+  <text x="400" y="380" fill="#4a5568" font-family="sans-serif" font-size="15" text-anchor="middle">awarded by Zero Plastic Vavuniya Community in 2025.</text>
+
+  <!-- Signatures -->
+  <g transform="translate(150, 480)">
+    <line x1="0" y1="0" x2="180" y2="0" stroke="#718096" stroke-width="1.5"/>
+    <text x="90" y="20" fill="#2d3748" font-family="sans-serif" font-weight="bold" font-size="13" text-anchor="middle">Executive Coordinator</text>
+    <text x="90" y="38" fill="#718096" font-family="sans-serif" font-size="11" text-anchor="middle">Zero Plastic Vavuniya</text>
+  </g>
+
+  <g transform="translate(470, 480)">
+    <line x1="0" y1="0" x2="180" y2="0" stroke="#718096" stroke-width="1.5"/>
+    <text x="90" y="20" fill="#2d3748" font-family="sans-serif" font-weight="bold" font-size="13" text-anchor="middle">Regional Director</text>
+    <text x="90" y="38" fill="#718096" font-family="sans-serif" font-size="11" text-anchor="middle">Community Initiatives</text>
+  </g>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181825"/>
+      <stop offset="100%" stop-color="#1e1e2e"/>
+    </linearGradient>
+    <linearGradient id="bubbleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#89b4fa"/>
+      <stop offset="100%" stop-color="#b4befe"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" rx="16" fill="url(#bgGrad)"/>
+
+  <!-- Desktop App Window Controls -->
+  <rect x="0" y="0" width="800" height="40" fill="#11111b" rx="16"/>
+  <circle cx="25" cy="20" r="6" fill="#f38ba8"/>
+  <circle cx="45" cy="20" r="6" fill="#f9e2af"/>
+  <circle cx="65" cy="20" r="6" fill="#a6e3a1"/>
+  <text x="400" y="25" fill="#a6adc8" font-family="sans-serif" font-size="12" text-anchor="middle">Python Tkinter — AI Rule-Based Chatbot GUI</text>
+
+  <!-- Left Sidebar -->
+  <rect x="0" y="40" width="220" height="410" fill="#181825" stroke="#313244" stroke-width="1"/>
+  <rect x="20" y="60" width="180" height="38" rx="8" fill="#313244"/>
+  <text x="40" y="83" fill="#cdd6f4" font-family="sans-serif" font-size="13" font-weight="bold">+ New Conversation</text>
+
+  <text x="20" y="130" fill="#6c7086" font-family="sans-serif" font-size="11" font-weight="bold">RECENT CHATS</text>
+  
+  <rect x="15" y="145" width="190" height="32" rx="6" fill="#45475a"/>
+  <text x="30" y="166" fill="#cdd6f4" font-family="sans-serif" font-size="12">💬 Tkinter Rule Matcher</text>
+
+  <text x="30" y="206" fill="#a6adc8" font-family="sans-serif" font-size="12">💬 Python Pattern RegEx</text>
+  <text x="30" y="246" fill="#a6adc8" font-family="sans-serif" font-size="12">💬 Customer Support Bot</text>
+  <text x="30" y="286" fill="#a6adc8" font-family="sans-serif" font-size="12">💬 FAQ Automated System</text>
+
+  <!-- Main Chat Window Area -->
+  <!-- Bot Header -->
+  <rect x="220" y="40" width="580" height="50" fill="#1e1e2e" stroke="#313244" stroke-width="1"/>
+  <circle cx="250" cy="65" r="14" fill="#cba6f7"/>
+  <text x="250" y="70" fill="#11111b" font-size="16" text-anchor="middle">🤖</text>
+  <text x="275" y="64" fill="#cdd6f4" font-family="'Poppins', sans-serif" font-weight="bold" font-size="14">PyBot Assistant</text>
+  <text x="275" y="79" fill="#a6e3a1" font-family="sans-serif" font-size="10">● Online &amp; Listening</text>
+
+  <!-- Message Bubbles -->
+  <!-- Bot Msg 1 -->
+  <rect x="250" y="110" width="340" height="55" rx="14" fill="#313244"/>
+  <text x="270" y="133" fill="#cdd6f4" font-family="sans-serif" font-size="12">Hello Sangothayan! I am your Tkinter GUI bot.</text>
+  <text x="270" y="151" fill="#cdd6f4" font-family="sans-serif" font-size="12">How can I assist you with Python code today?</text>
+
+  <!-- User Msg 1 -->
+  <rect x="420" y="180" width="350" height="42" rx="14" fill="url(#bubbleGrad)"/>
+  <text x="440" y="206" fill="#11111b" font-family="sans-serif" font-size="12" font-weight="600">Explain how pattern matching algorithm works!</text>
+
+  <!-- Bot Msg 2 -->
+  <rect x="250" y="235" width="450" height="75" rx="14" fill="#313244"/>
+  <text x="270" y="258" fill="#cdd6f4" font-family="sans-serif" font-size="12">Sure! The engine compares user inputs against pre-defined</text>
+  <text x="270" y="276" fill="#cdd6f4" font-family="sans-serif" font-size="12">keyword intent maps and regular expressions to fetch instant,</text>
+  <text x="270" y="294" fill="#89b4fa" font-family="sans-serif" font-size="12" font-weight="bold">accurate responses through the Tkinter desktop GUI!</text>
+
+  <!-- Prompt Input Bar -->
+  <rect x="240" y="380" width="540" height="50" rx="25" fill="#313244" stroke="#45475a" stroke-width="1"/>
+  <text x="270" y="410" fill="#a6adc8" font-family="sans-serif" font-size="13">Type your question or query here...</text>
+  <circle cx="755" cy="405" r="18" fill="#89b4fa"/>
+  <path d="M748 405 L762 405 M757 399 L763 405 L757 411" stroke="#11111b" stroke-width="2.5" stroke-linecap="round"/>
+</svg>
