@@ -1,4 +1,4 @@
-// ---------- 1. Certificate Popup Modal ----------
+
 (function () {
     const certModal = document.getElementById('cert-modal');
     if (!certModal) return;
@@ -23,31 +23,31 @@
         if (certOrg) certOrg.textContent = org;
 
         if (isPdf) {
-            // Show PDF iframe, hide img
+            
             if (certImg) certImg.style.display = 'none';
             if (certPdf) {
                 certPdf.src = pdfSrc;
                 certPdf.style.display = 'block';
             }
-            // Download button → downloads the PDF
+           
             if (certDownload) {
                 certDownload.href = pdfSrc;
                 certDownload.setAttribute('download', title.replace(/\s+/g, '_') + '.pdf');
             }
-            // Show "Open Full PDF" button
+         
             if (certOpenPdf) {
                 certOpenPdf.href = pdfSrc;
                 certOpenPdf.style.display = 'inline-flex';
             }
         } else {
-            // Show image, hide PDF iframe
+          
             if (certPdf) { certPdf.style.display = 'none'; certPdf.src = ''; }
             if (certImg) {
                 certImg.src = img;
                 certImg.alt = title;
                 certImg.style.display = 'block';
             }
-            // Download button → downloads the image
+           
             if (certDownload) {
                 certDownload.href = img;
                 let downloadExt = 'jpg';
@@ -57,7 +57,7 @@
                 } catch (e) {}
                 certDownload.setAttribute('download', title.replace(/\s+/g, '_') + '.' + downloadExt);
             }
-            // Hide "Open Full PDF" button
+         
             if (certOpenPdf) certOpenPdf.style.display = 'none';
         }
 
@@ -104,7 +104,7 @@
 })();
 
 
-// ---------- 2. Project Detail Modal ----------
+
 (function () {
     const projectModal = document.getElementById('project-modal');
     if (!projectModal) return;
@@ -184,7 +184,7 @@
     });
 })();
 
-// ---------- 3. About Me Read More / Read Less Toggle ----------
+
 (function () {
     const btn = document.getElementById('about-read-more-btn');
     const extendedContent = document.getElementById('about-extended');
@@ -203,7 +203,7 @@
     }
 })();
 
-// ---------- 4. Minimalist Theme Toggle ----------
+
 (function () {
     const toggleBtn = document.getElementById('theme-toggle');
     const toggleLabel = toggleBtn?.querySelector('.toggle-label');
@@ -238,7 +238,7 @@
     }
 })();
 
-// ---------- 5. Profile Card 3D Tilt ----------
+
 (function () {
     const card = document.getElementById('title');
     const container = document.querySelector('#pic');
@@ -267,7 +267,7 @@
     }
 })();
 
-// ---------- 6. Navigation Scroll, Active Highlight & Back to Top ----------
+
 const backToTopBtn = document.getElementById('back-to-top');
 
 window.addEventListener('scroll', () => {
@@ -321,7 +321,7 @@ if (backToTopBtn) {
     }
 })();
 
-// Active Nav Link Highlighting
+
 (function () {
     const sections = document.querySelectorAll('section[id]');
     const navAnchors = document.querySelectorAll('.nav-links a');
@@ -345,7 +345,7 @@ if (backToTopBtn) {
     setActiveNav();
 })();
 
-// ---------- 7. Contact Form Submit with Thank You Pop-up Modal ----------
+
 (function () {
     const form = document.getElementById('contact-form');
     const contactModal = document.getElementById('contact-modal');
@@ -398,7 +398,7 @@ if (backToTopBtn) {
     }
 })();
 
-// ---------- 8. IntersectionObserver Scroll Reveal ----------
+
 (function () {
     const revealEls = document.querySelectorAll('.reveal');
 

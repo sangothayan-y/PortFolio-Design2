@@ -70,7 +70,7 @@ body {
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* Sections fit content tightly without huge min-height gaps */
+
 section {
     min-height: auto;
     scroll-margin-top: 135px;
@@ -131,7 +131,7 @@ main > section:first-child {
     max-width: 650px;
 }
 
-/* Scroll Reveal — Fade-In from below */
+
 .reveal {
     opacity: 0;
     transform: translateY(36px);
@@ -150,7 +150,7 @@ main > section:first-child {
 .reveal:nth-child(4) { transition-delay: 0.3s; }
 .reveal:nth-child(5) { transition-delay: 0.4s; }
 
-/* Navigation Header */
+
 nav {
     background: linear-gradient(180deg, var(--primary) 0%, var(--primary-soft) 100%);
     height: 120px;
@@ -250,7 +250,7 @@ nav a.active {
     gap: 0.75rem;
 }
 
-/* Minimalist Clean Theme Toggle Button */
+
 .theme-toggle {
     display: inline-flex;
     align-items: center;
@@ -301,7 +301,7 @@ nav.scrolled #navigation {
     top: 1rem;
 }
 
-/* Home Section Layout & Height Alignment */
+
 #home {
     margin-top: 180px;
     color: var(--text);
@@ -455,7 +455,7 @@ nav.scrolled #navigation {
 .social-github { background: linear-gradient(135deg, rgba(23, 32, 49, 0.98), rgba(41, 55, 77, 1)); }
 .social-email { background: linear-gradient(135deg, var(--link), var(--primary-soft)); }
 
-/* Profile Photo Card Matched to Left Height */
+
 #pic {
     width: 380px;
     margin-top: 0;
@@ -494,7 +494,7 @@ nav.scrolled #navigation {
     border-radius: 28px;
 }
 
-/* Stat Cards */
+
 #cardlog {
     font-family: Nunito, sans-serif;
     display: flex;
@@ -542,7 +542,7 @@ nav.scrolled #navigation {
     font-weight: 700;
 }
 
-/* Unified Card Hover Effect across all card components */
+
 .card:hover,
 .project-card:hover,
 .cert-card:hover,
@@ -564,7 +564,7 @@ nav.scrolled #navigation {
     margin: 3.5rem 0;
 }
 
-/* About Me Section */
+
 #about-me {
     display: flex;
     align-items: flex-start;
@@ -624,7 +624,7 @@ nav.scrolled #navigation {
     z-index: 3;
 }
 
-/* Hover Scaling Effect */
+
 .about-photo-wrapper:hover .about-person-img {
     transform: translateX(-50%) scale(1.08);
 }
@@ -709,7 +709,7 @@ nav.scrolled #navigation {
     width: 20px;
 }
 
-/* Always Visible Career Objective Box with Glowing Border */
+
 .career-objective-box {
     background: var(--surface);
     border: 1px solid var(--accent);
@@ -760,9 +760,7 @@ nav.scrolled #navigation {
     gap: 0.45rem;
 }
 
-/* ===================================
-   Education — Attractive Card Layout
-   =================================== */
+
 .edu-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -789,7 +787,7 @@ nav.scrolled #navigation {
     box-shadow: 0 16px 48px -8px var(--accent-glow), 0 4px 16px var(--card-shadow);
 }
 
-/* Floating ambient glow orb */
+
 .edu-card-glow {
     position: absolute;
     top: -40px;
@@ -811,7 +809,7 @@ nav.scrolled #navigation {
     background: radial-gradient(circle, rgba(139, 92, 246, 0.28) 0%, transparent 70%);
 }
 
-/* Left Icon Column */
+
 .edu-card-icon {
     flex-shrink: 0;
     width: 56px;
@@ -833,7 +831,7 @@ nav.scrolled #navigation {
     box-shadow: 0 6px 20px rgba(139, 92, 246, 0.35);
 }
 
-/* Card body */
+
 .edu-card-body {
     flex: 1;
     min-width: 0;
@@ -900,7 +898,7 @@ nav.scrolled #navigation {
     font-family: Nunito, sans-serif;
 }
 
-/* Stat pills row */
+
 .edu-card-stats {
     display: flex;
     flex-wrap: wrap;
@@ -947,7 +945,7 @@ nav.scrolled #navigation {
     font-family: Nunito, sans-serif;
 }
 
-/* Skills Section */
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -1001,7 +999,7 @@ nav.scrolled #navigation {
     box-shadow: 0 0 14px var(--accent-glow);
 }
 
-/* Original Skill Brand Colors */
+
 .skill-java i { color: #ED8B00 !important; }
 .skill-python i { color: #3776AB !important; }
 .skill-js i { color: #F7DF1E !important; }
@@ -1014,7 +1012,7 @@ nav.scrolled #navigation {
 .skill-vscode i { color: #007ACC !important; }
 .skill-intellij i { color: #FE315D !important; }
 
-/* Projects Grid & CTA Spacing */
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
@@ -1115,9 +1113,7 @@ nav.scrolled #navigation {
     margin-bottom: 3rem;
 }
 
-/* =============================================
-   Competitions & Events — Card Grid
-   ============================================= */
+
 .comp-cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1157,10 +1153,8 @@ nav.scrolled #navigation {
 }
 
 .comp-card:hover::before {
-    opacity: 1;
+    opacity: 1
 }
-
-/* Top row: icon + year */
 .comp-card-top {
     display: flex;
     align-items: center;
@@ -1202,7 +1196,7 @@ nav.scrolled #navigation {
     box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
 }
 
-/* PDF download link on cert cards */
+
 .cert-pdf-link {
     display: inline-flex;
     align-items: center;
@@ -1263,7 +1257,7 @@ nav.scrolled #navigation {
     flex: 1;
 }
 
-/* Certificate thumbnail pinned to bottom */
+
 .comp-card-footer {
     margin-top: auto;
     padding-top: 1rem;
@@ -1484,7 +1478,7 @@ nav.scrolled #navigation {
     font-weight: 700;
 }
 
-/* CV Section & Connect */
+
 .cv-section {
     display: flex;
     justify-content: center;
@@ -1655,9 +1649,7 @@ nav.scrolled #navigation {
     box-shadow: 0 12px 28px -8px var(--accent-glow);
 }
 
-/* ===================================
-   Footer — Centered 3-line layout
-   =================================== */
+
 footer {
     background: var(--primary);
     padding: 2.5rem 2rem;
@@ -1962,7 +1954,7 @@ body.modal-open {
     justify-content: flex-end;
 }
 
-/* Responsive Media Queries */
+
 @media (max-width: 1024px) {
     section, #home {
         padding-left: 2rem;
